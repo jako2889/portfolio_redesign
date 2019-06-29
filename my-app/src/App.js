@@ -1,12 +1,12 @@
 import React from 'react';
-import Landingpage from "./Components/Landingpage.jsx";
+import FrontPageState from "./Components/FrontPageState.jsx";
 
 import "./css/Main.scss";
 
 function App() {
   return (
     <div className="App">
-      <Landingpage />
+      <FrontPageState />
     </div>
   );
 }

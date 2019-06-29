@@ -74,7 +74,18 @@ height: 100vh;
       
       .button_fill:hover:before {
         top: 0;
+      } 
+
+      
+      .LoadScreen {
+        opacity: 0;
+        transition: 1s;
+    }
+      .flashScreen {
+          opacity: 1;
+          transition: 1s;
       }
-}
+
+    }
 
 }
