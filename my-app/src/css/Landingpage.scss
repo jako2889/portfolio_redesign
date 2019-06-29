@@ -1,8 +1,13 @@
+.wrapper {
+width: 100%;
+height: 100vh;
+
 .container {
     background-image: url("../Assets/welcome.jpg");
     background-position: 100% 100%;
+    background-size: cover;
     width: 100%;
-    height: 100vw;
+    height: 100%;
 
     display: flex;
     justify-content: center;
@@ -11,6 +16,22 @@
 
     h1, h2 {
         margin: 0;
+    }
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        color: #101010;
+        margin-bottom: 10px;
+
+        font-size: 165px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    h2 {
+        text-align: left;
+        color: #313131;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
     }
 
     button {
@@ -54,4 +75,6 @@
       .button_fill:hover:before {
         top: 0;
       }
+}
+
 }
