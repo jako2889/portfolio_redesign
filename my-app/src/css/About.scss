@@ -12,14 +12,83 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        padding: 0;
+
         li {
-            width: 100px;
-            height: 20px;
-            border: 2px solid black;
-            padding: 10px;
+            width: 300px;
+            height: 300px;
+            background-size: cover;
             margin: 10px;
             opacity: 0;
             list-style: none;
+
+            color: black;
+            font-size: 1.5em;
+            font-weight: 700;
+            font-family: sans-serif;
+            text-align: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: .5s ease;
+
+            &:hover {
+                transition: .5s ease;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: rgba(255, 255, 255, 0.466);
+                    width: 100%;
+                    height: 100%;
+                    transition: .5s ease;
+                }
+            }
+
+        }
+        .DanskeSpil {
+            background-image: url("../Assets/alm.jpg");
+            &::before {
+                content: "Danske Spil";
+                position: absolute;
+                z-index: 2;
+                background: white;
+                padding: 1em;
+            }
+        }
+        .CopenhagenWatches {
+            background-image: url("../Assets/cph.jpg");
+            &::before {
+                content: "Copenhagen Watches";
+                position: absolute;
+                z-index: 2;
+                background: white;
+                padding: 0.5em;
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+        }
+        .AlmBrand {
+            background-image: url("../Assets/alm.jpg");
+            &::before {
+                content: "Alm Brand";
+                position: absolute;
+                z-index: 2;
+                background: white;
+                padding: 1em;
+            }
+        }
+        .Huset {
+            background-image: url("../Assets/huset.jpg");
+            &::before {
+                content: "Huset";
+                position: absolute;
+                z-index: 2;
+                background: white;
+                padding: 1em;
+            }
         }
     }
 }

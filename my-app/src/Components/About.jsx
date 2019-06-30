@@ -13,20 +13,20 @@ export class About extends Component {
         this.myTween2 = new TimelineLite({paused: true});
         this.ArrayElements = [
             {
-                name: "jakob",
-                id: 1
+                name: "Danske Spil",
+                class: "DanskeSpil"
             },
             {
-                name: "Nikolaj",
-                id: 2
+                name: "Copenhagen Watches",
+                class: "CopenhagenWatches"
             },
             {
-                name: "Cæcilie",
-                id: 3
+                name: "Alm. Brand",
+                class: "AlmBrand"
             },
             {
-                name: "Bo",
-                id: 4
+                name: "Huset",
+                class: "Huset"
             },
         ];
       }
@@ -46,7 +46,8 @@ export class About extends Component {
                 <h1>Welcome!</h1>
                 <ul>
                     {this.ArrayElements.map((element, index) => <li
-                        key={element.id}
+                        className={element.class}
+                        key={element.name}
                         ref={li => this.ArrayElements[index] = li}
                     >
                         {element.name}
