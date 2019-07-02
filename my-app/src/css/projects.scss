@@ -10,6 +10,19 @@
     padding-top: 5%;
     padding-bottom: 5%;
 
+    .triggerClass {
+        transition: 1s ease-in-out;
+        transform: translateX(100px);
+    }
+    .triggerClass2 {
+        transition: 1s ease-in-out;
+        transform: translateX(-100px);
+    }
+
+    .fade-in {
+        transition: 1s ease-in-out;
+        transform: translateX(0);
+    }
 .project_con {
     grid-area: projects;
     display: flex;
@@ -53,11 +66,25 @@
         box-sizing: border-box;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         cursor: pointer;
+        position: relative;
 
         &:hover {
             background: lighten(#000000, 10% );
             border-color: lighten(#000000, 10% );
             transition: .5s;
+
+            &::after {
+                transition: .5s;
+                background-image: url("../Assets/button.svg");
+                background-size: 15px 15px;
+                display: inline-block;
+                width: 15px; 
+                height: 15px;
+                content:"";
+                position: absolute;
+                top: 30%;
+                right: 5%;
+            }
         }
     }
     }

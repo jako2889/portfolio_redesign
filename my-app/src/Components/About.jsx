@@ -4,6 +4,7 @@ import "../css/About.scss";
 import profile_picture from "../Assets/jakob.jpg";
 import Projects from "./projects.jsx";
 import GetInTouch from "./GetInTouch.jsx";
+import Header from "./Header.jsx";
 
 export class About extends Component {
     constructor(props) {
@@ -55,6 +56,8 @@ export class About extends Component {
       }
     render() {
         return (
+          <div className="about">
+              <Header />
             <div className="wrapper_about" ref={div => (this.myIntro = div)}>
                 <div className="container_about">
                 <div className="intro">
@@ -72,11 +75,13 @@ export class About extends Component {
                     </div>
                     <img src={profile_picture} alt={profile_picture}/>
                     <div className="heartit"></div>
+                    <h2 className="scroll-info">Scroll for more!</h2>
                     <div className="scroll-down"></div>    
                 </div>
                 </div>
                 <Projects />
                 <GetInTouch />
+            </div>
             </div>
         )
     }

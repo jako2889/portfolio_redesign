@@ -1,0 +1,38 @@
+.header_wrapper {
+    width: 100%;
+
+    .header_con {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        img {
+            width: 50px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: .7;
+                transition: .5s;
+            }
+        }
+
+        .header_links {
+            align-self: center;
+
+            a {
+                padding-left: 30px;
+                text-decoration: none;
+                color: #313131;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+
+                &:hover {
+                    opacity: .5;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}

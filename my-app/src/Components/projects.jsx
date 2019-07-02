@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "../css/About.scss";
 import "../css/projects.scss";
 import { TimelineLite } from "gsap";
+import ScrollMagic from 'scrollmagic';
 import DanskespilPic from "../Assets/danskespil_project.JPG";
 import CPHPIC from "../Assets/cph.jpg";
 import Services from "./Services.jsx";
@@ -10,7 +11,9 @@ export class projects extends Component {
     constructor(props) {
         super(props);
         // reference to the DOM node
-
+        this.project01 = null;
+        this.project02 = null;
+        
         this.myTween2 = new TimelineLite({paused: true});
         this.ArrayElements = [
             {
@@ -26,9 +29,39 @@ export class projects extends Component {
                 link: "www.google.com"
             }
         ];
+
+
       }
     
       componentDidMount() {
+        // SCROLL MAGIC INIT
+        let controller = new ScrollMagic.Controller();
+
+        let projectScene = this.project01;
+
+        projectScene.classList.add("triggerClass");
+        
+        //BUILD SCROOLMAGIC SCENE
+        let project01Scene = new ScrollMagic.Scene({
+            triggerElement: projectScene,
+            duration: 1000
+        })
+        .setClassToggle(".triggerClass", "fade-in")
+        .addTo(controller);
+
+        // SCROLL MAGIC INIT
+
+        let projectScene2 = this.project02;
+
+        projectScene2.classList.add("triggerClass2");
+        
+        //BUILD SCROOLMAGIC SCENE
+        let project02Scene = new ScrollMagic.Scene({
+            triggerElement: projectScene2,
+            duration: 1000
+        })
+        .setClassToggle(".triggerClass2", "fade-in")
+        .addTo(controller);
           
         this.myTween2.staggerTo(this.ArrayElements, 0.5, {y: 0, opacity: 1, delay: 1}, 0.1).play();
 
@@ -43,13 +76,13 @@ export class projects extends Component {
                 <p>{this.ArrayElements[0].text}</p>
                 <button>See project</button>
                 </div>
-                <img src={DanskespilPic} alt={DanskespilPic}/>
+                <img ref={div => (this.project01 = div)} src={DanskespilPic} alt={DanskespilPic}/>
             </div>
             </div>
             <Services />
             <div className="projects">
             <div className="project_con">
-                <div className="project_text">
+                <div ref={div => (this.project02 = div)} className="project_text">
                 <h2>{this.ArrayElements[1].name}</h2>
                 <p>{this.ArrayElements[1].text}</p>
                 <button>See project</button>
