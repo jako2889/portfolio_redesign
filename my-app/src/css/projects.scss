@@ -24,7 +24,7 @@
         font-size: 1.5em;
         text-transform: uppercase;
         font-family: 'Roboto', sans-serif;
-        position: relative;
+        display: flex;
 
         &::after {
             background-image: url("../Assets/001-code.svg");
@@ -33,9 +33,8 @@
             width: 30px; 
             height: 30px;
             content:"";
-            position: absolute;
-            top: 0;
-            left: 25%;
+            margin-left: 10px;
+            align-self: center;
         }
     }
     p {

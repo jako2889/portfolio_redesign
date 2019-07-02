@@ -3,6 +3,7 @@ import "../css/About.scss";
 import "../css/projects.scss";
 import { TimelineLite } from "gsap";
 import DanskespilPic from "../Assets/danskespil_project.JPG";
+import CPHPIC from "../Assets/cph.jpg";
 import Services from "./Services.jsx";
 
 export class projects extends Component {
@@ -42,18 +43,18 @@ export class projects extends Component {
                 <p>{this.ArrayElements[0].text}</p>
                 <button>See project</button>
                 </div>
-                <img src={DanskespilPic} alt=""/>
+                <img src={DanskespilPic} alt={DanskespilPic}/>
             </div>
             </div>
             <Services />
             <div className="projects">
             <div className="project_con">
                 <div className="project_text">
-                <h2>{this.ArrayElements[0].name}</h2>
-                <p>{this.ArrayElements[0].text}</p>
+                <h2>{this.ArrayElements[1].name}</h2>
+                <p>{this.ArrayElements[1].text}</p>
                 <button>See project</button>
                 </div>
-                <img src={DanskespilPic} alt=""/>
+                <img src={CPHPIC} alt={CPHPIC}/>
             </div>
             </div>
             </div>

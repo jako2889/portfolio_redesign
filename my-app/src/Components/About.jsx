@@ -60,8 +60,8 @@ export class About extends Component {
                 <div className="intro">
                     <div className="text">
                     <h1>HI. NICE TO MEET YOU!</h1>
-                    <p>I'm a multimedia designer and always learning web developer.
-                    I like creating beautiful and unique websites and digital content! Below you can see a little about me and some projects i've been doing.</p>
+                    <p>I'm a multimedia designer and always learning web developer.<br />
+                    I like creating beautiful and unique websites and digital content! Below you can see a little about me and some projects i've been doing.<br /> This portfolio is made in React.js.</p>
                     <div className="skills">
                     <h3>Skills</h3>
                     <div className="javascript" ref={div => (this.barJs = div)}>Javascript</div>

@@ -29,6 +29,9 @@
             }
             p {
                 font-family: 'Roboto', sans-serif;
+                &::first-line {
+                    font-weight: 700;
+                }
             }
             .skills {
                 font-family: 'Roboto', sans-serif;
