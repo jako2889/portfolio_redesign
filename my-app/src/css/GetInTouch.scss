@@ -1,0 +1,79 @@
+.GetInTouch_wrapper {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    h2 {
+        width: 100%;
+        color: #313131;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        position: relative;
+        margin-bottom: 15px;
+        }
+        .bar {
+        width: 55px;
+        height: 15px;
+        transform: skewY(-16deg);
+        background: #B5C9C3;
+        position: absolute;
+        top: 9%;
+        }
+    .GIT_container {
+        display: grid;
+        grid-template-columns: 1fr minmax(50px, 1000px) 1fr;
+        grid-template-areas: ". GIT .";
+        margin-bottom: 5%;
+        margin-top: 5%;
+    .GIT_content {
+        width: 100%;
+        grid-area: GIT;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+
+        .GIT_Text {
+            width: 50%;
+            h2 {
+                margin-bottom: 0;
+            }
+            p {
+                margin-top: 0;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+    
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+
+        img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+  }  
+  h3 {
+    width: 100%;
+    color: #313131;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  img {
+      width: 50px;
+  }  
+}

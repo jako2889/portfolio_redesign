@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { TweenMax, Back, TimelineLite } from "gsap";
+import { TweenMax, Back } from "gsap";
 import "../css/About.scss";
 import profile_picture from "../Assets/jakob.jpg";
+import Projects from "./projects.jsx";
+import GetInTouch from "./GetInTouch.jsx";
 
 export class About extends Component {
     constructor(props) {
@@ -18,26 +20,6 @@ export class About extends Component {
         this.barTweenAdobe = null;
         this.barTweenReact = null;
         this.barTweenOTT = null;
-
-        this.myTween2 = new TimelineLite({paused: true});
-        this.ArrayElements = [
-            {
-                name: "Danske Spil",
-                class: "DanskeSpil"
-            },
-            {
-                name: "Copenhagen Watches",
-                class: "CopenhagenWatches"
-            },
-            {
-                name: "Alm. Brand",
-                class: "AlmBrand"
-            },
-            {
-                name: "Huset",
-                class: "Huset"
-            },
-        ];
       }
     
       componentDidMount() {
@@ -70,8 +52,6 @@ export class About extends Component {
             delay: .5,
             ease: Back.easeOut.config(1.0002)
           });
-
-        this.myTween2.staggerTo(this.ArrayElements, 0.5, {y: 0, opacity: 1, delay: 1}, 0.1).play();;
       }
     render() {
         return (
@@ -91,21 +71,12 @@ export class About extends Component {
                     </div>
                     </div>
                     <img src={profile_picture} alt={profile_picture}/>
+                    <div className="heartit"></div>
                     <div className="scroll-down"></div>    
                 </div>
-                <div className="projects">
-                <h2>Projects i've been doing.</h2>    
-                <ul>
-                    {this.ArrayElements.map((element, index) => <li
-                        className={element.class}
-                        key={element.name}
-                        ref={li => this.ArrayElements[index] = li}
-                    >
-                        {element.name}
-                    </li>)}
-                </ul>
                 </div>
-                </div>
+                <Projects />
+                <GetInTouch />
             </div>
         )
     }

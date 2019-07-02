@@ -1,0 +1,46 @@
+.service_con {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+    h2 {
+    width: 100%;
+    color: #313131;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin-bottom: 15px;
+    }
+    .bar {
+    width: 55px;
+    height: 15px;
+    transform: skewY(-16deg);
+    background: #B5C9C3;
+    }
+    .lists_con {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2%;
+        margin-left: 4%;
+
+        .list {
+            padding: 0 5% 0 5%;
+            ul {
+                padding: 0;
+                li {
+                    list-style: none;
+                    padding-bottom: 10%;
+                    text-transform: uppercase;
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+        }
+    }
+
+}
